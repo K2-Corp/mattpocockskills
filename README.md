@@ -20,11 +20,7 @@ These skills are designed to be small, easy to adapt, and composable. They work 
 
 If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter:
 
-[Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter)
-
 ## Installation (30-second setup)
-
-A plugin updates itself. [skills.sh](https://skills.sh/mattpocock/skills) copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice.
 
 ### 1. Get the skills
 
