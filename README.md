@@ -24,14 +24,15 @@ If you want to keep up with changes to these skills, and any new ones I create, 
 
 ### 1. Get the skills
 
+All installs come from this fork, `K2-Corp/mattpocockskills`, not upstream. Updates only arrive when this fork is synced after review.
+
 <details>
 <summary><strong>Claude Code</strong></summary>
 
 ```bash
-claude plugin install mattpocock-skills@claude-plugins-official
+claude plugin marketplace add K2-Corp/mattpocockskills
+claude plugin install mattpocock-skills@mattpocock
 ```
-
-Updates itself by default.
 
 </details>
 
@@ -39,11 +40,9 @@ Updates itself by default.
 <summary><strong>Codex</strong></summary>
 
 ```bash
-codex plugin marketplace add mattpocock/skills
+codex plugin marketplace add K2-Corp/mattpocockskills
 codex plugin add mattpocock-skills@mattpocock
 ```
-
-Updates itself at startup.
 
 </details>
 
@@ -51,21 +50,21 @@ Updates itself at startup.
 <summary><strong>GitHub Copilot</strong> (CLI and VS Code)</summary>
 
 ```bash
-copilot plugin marketplace add mattpocock/skills
+copilot plugin marketplace add K2-Corp/mattpocockskills
 copilot plugin install mattpocock-skills@mattpocock
 ```
 
-Then, once, add to `~/.copilot/settings.json`:
+For auto-updates from this fork, add once to `~/.copilot/settings.json`:
 
 ```json
 {
   "extraKnownMarketplaces": {
-    "mattpocock": { "source": { "source": "github", "repo": "mattpocock/skills" }, "autoUpdate": true }
+    "mattpocock": { "source": { "source": "github", "repo": "K2-Corp/mattpocockskills" }, "autoUpdate": true }
   }
 }
 ```
 
-In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily.
+In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/K2-Corp/mattpocockskills`.
 
 </details>
 
@@ -73,8 +72,8 @@ In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.c
 <summary><strong>Gemini CLI</strong> (manual updates)</summary>
 
 ```bash
-gemini skills install https://github.com/mattpocock/skills.git --path skills/engineering
-gemini skills install https://github.com/mattpocock/skills.git --path skills/productivity
+gemini skills install https://github.com/K2-Corp/mattpocockskills.git --path skills/engineering
+gemini skills install https://github.com/K2-Corp/mattpocockskills.git --path skills/productivity
 ```
 
 Re-run both commands to update.
@@ -85,10 +84,10 @@ Re-run both commands to update.
 <summary><strong>Any other agent, or editable files</strong> (manual updates)</summary>
 
 ```bash
-npx skills@latest add mattpocock/skills -a <agent>  # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose
+npx skills@<version> add K2-Corp/mattpocockskills -a <agent>  # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose
 ```
 
-When the installer asks which skills to take, include `setup-matt-pocock-skills`. To update, run `npx skills@latest update`, and re-run `add` to pick up new skills.
+Use the pinned installer version only, never `@latest`. When asked which skills to take, include `setup-matt-pocock-skills`. To update, run `npx skills@<version> update`, and re-run `add` to pick up new skills.
 
 </details>
 
